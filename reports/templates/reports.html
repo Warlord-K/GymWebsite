@@ -7,29 +7,38 @@
 
 {% block content %}
 <!-- <a href="{% url 'export_all' %}">Export all users</a> -->
-<form method="POST" action="{% url 'reports' %}" style="margin-top: 3%; margin-bottom: 3%">
+<section
+  class="relative bg-[url(/media/wallpaper/report3.png)] bg-cover bg-center bg-no-repeat"
+>
+<form method="POST" action="{% url 'reports' %}" >
     {% csrf_token %}
     <div class="row container">
-        <div class="col">
-            <label for="month">{{ form.month.label }}</label>
+        <div class="w-full h-screen">
+            <div class="flex h-screen">
+              <div class="m-auto flex flex-col gap-6">
+        <div class="flex flex-row justify-between w-48 px-2 py-2 text-gray-700 bg-white border-2 border-white rounded-md shadow focus:outline-none focus:border-blue-600">
+            <label class="" for="month">{{ form.month.label }}</label>
             {{ form.month | add_css:"form-control" }}
         </div>
-        <div class="col">
+        <div class="flex flex-row justify-between w-48 px-2 py-2 text-gray-700 bg-white border-2 border-white rounded-md shadow focus:outline-none focus:border-blue-600">
             <label for="year">{{ form.year.label }}</label>
             {{ form.year | add_css:"form-control" }}
         </div>
-        <div class="col">
+        <div class="flex flex-row justify-between w-48 px-2 py-2 text-gray-700 bg-white border-2 border-white rounded-md shadow focus:outline-none focus:border-blue-600">
             <label for="batch">{{ form.batch.label }}</label>
             {{ form.batch | add_css:"form-control" }}
         </div>
         <div style="margin-top: 3%">
-            <button type="submit" id="submit" class="btn btn-danger">Generate Report</button>
+            <button type="submit" id="submit" class="block w-full rounded bg-cyan-700 px-12 py-3 text-sm font-medium text-white shadow hover:bg-amber-500 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">Generate Report</button>
         </div>
 
         <div class="col ml-auto" style="margin-top: 3%">
-            <button type="submit" id="export" name="export" class="btn btn-dark">Export to Excel</button>
+            <button type="submit" id="export" name="export" class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-cyan-700 shadow hover:text-amber-500 focus:outline-none focus:ring active:text-rose-500 sm:w-auto">Export to Excel</button>
         </div>
     </div>
+</div>
+</div>
+</div>
 </form>
 
 {% if students_registered %}
@@ -79,4 +88,6 @@
         </table>
     </div>
 {% endif %}
+</section>
+
 {% endblock %}
