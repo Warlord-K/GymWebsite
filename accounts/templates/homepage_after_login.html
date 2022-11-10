@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title %}
-  GYM EDGE
+  Spark Fitness
 {% endblock %}
 
 {% block without_container %}
@@ -20,7 +20,7 @@
           </span>
           <p class="ml-3 truncate font-medium text-white">
             <span class="md:hidden">We announced a new product!</span>
-            <span class="hidden md:inline">Big news! We're excited to announce a new sexy Trainer!.</span>
+            <span class="hidden md:inline">Big news! We're excited to announce a New Sexy Trainer!.</span>
           </p>
         </div>
         <div class="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
@@ -66,7 +66,7 @@
 
       <div class="mt-8 flex flex-wrap gap-4 text-center">
         <a
-          href="#"
+          href="/members/"
           class="block w-full rounded bg-cyan-700 px-12 py-3 text-sm font-medium text-white shadow hover:bg-amber-500 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
         >
           Get Started
@@ -115,7 +115,7 @@
           faster. You can change the text and images and you're good to
           go. Just make sure you enable them first via JavaScript.
         </p>
-        <a href="../index.html" class="font-bold text-blueGray-700 mt-8">Check Notus JS!</a>
+        <!-- <a href="../index.html" class="font-bold text-blueGray-700 mt-8">Check Notus JS!</a> -->
       </div>
       <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
         <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-2 shadow-lg rounded-lg bg-cyan-800">
@@ -159,12 +159,12 @@
 <div class="min-h-screen bg-gray-900 flex justify-center items-center py-20">
   <div class="md:px-4 md:grid md:grid-cols-3 lg:grid-cols-4 gap-8 space-y-2 md:space-y-0">
     <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
-      <h3 class="mb-3 text-xl font-bold text-cyan-700">Beginner Friendly</h3>
+      <h3 class="mb-3 text-xl font-bold text-cyan-700">Expert</h3>
       <div class="relative">
         <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Colors" />
-        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">$50</p>
+        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">₹500</p>
       </div>
-      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Weight Lifting</h1>
+      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Gym</h1>
       <div class="my-4">
         <div class="flex space-x-1 items-center">
           <span>
@@ -172,7 +172,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </span>
-          <p>1:30:00 Minutes</p>
+          <p>1.5 Hours</p>
         </div>
         <div class="flex space-x-1 items-center">
           <span>
@@ -180,7 +180,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </span>
-          <p>3 Parts</p>
+          <p>5 Days a Week</p>
         </div>
         <div class="flex space-x-1 items-center">
           <span>
@@ -190,16 +190,18 @@
           </span>
           <p>Vanilla JS</p>
         </div>
-        <button class="mt-4 text-xl w-full text-white bg-cyan-700 py-2 hover:bg-amber-500 rounded-xl shadow-lg">Puchase</button>
+        <a href="/members/">
+        <button class="mt-4 text-xl w-full text-white bg-cyan-700 py-2 hover:bg-amber-500 rounded-xl shadow-lg">Purchase</button>
+        </a>
       </div>
     </div>
     <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
       <h3 class="mb-3 text-xl font-bold text-cyan-700">Intermediate</h3>
       <div class="relative">
         <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Colors" />
-        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">$30</p>
+        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">₹300</p>
       </div>
-      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Power Yoga</h1>
+      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Cross-Fit</h1>
       <div class="my-4">
         <div class="flex space-x-1 items-center">
           <span>
@@ -207,7 +209,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </span>
-          <p>1:00:00 Minutes</p>
+          <p>1 Hour</p>
         </div>
         <div class="flex space-x-1 items-center">
           <span>
@@ -215,7 +217,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </span>
-          <p>3 Parts</p>
+          <p>3 Days a Week</p>
         </div>
         <div class="flex space-x-1 items-center">
           <span>
@@ -225,17 +227,19 @@
           </span>
           <p>Vanilla JS</p>
         </div>
+        <a href="/members/">
         <button class="mt-4 text-xl w-full text-white bg-cyan-700 py-2 hover:bg-amber-500 rounded-xl shadow-lg">Purchase</button>
+      </a>
       </div>
     </div>
     <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
       <h3 class="mb-3 text-xl font-bold text-cyan-700">Intermediate</h3>
       <div class="relative">
         <img class="w-full rounded-xl" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Colors" />
-        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">$80</p>
+        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">₹800</p>
         <p class="absolute top-0 right-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">%20 Discount</p>
       </div>
-      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Cardio and Strength</h1>
+      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Gym + Cross-Fit</h1>
       <div class="my-4">
         <div class="flex space-x-1 items-center">
           <span>
@@ -243,7 +247,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </span>
-          <p>1:00:00 Minutes</p>
+          <p>1 Hour</p>
         </div>
         <div class="flex space-x-1 items-center">
           <span>
@@ -251,7 +255,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </span>
-          <p>3 Parts</p>
+          <p>6 Days a Week</p>
         </div>
         <div class="flex space-x-1 items-center">
           <span>
@@ -261,16 +265,18 @@
           </span>
           <p>TypeScript</p>
         </div>
+        <a href="/members/">
         <button class="mt-4 text-xl w-full text-white bg-cyan-700 py-2 hover:bg-amber-500 rounded-xl shadow-lg">Purchase</button>
+      </a>
       </div>
     </div>
     <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
       <h3 class="mb-3 text-xl font-bold text-cyan-700">Beginner Friendly</h3>
       <div class="relative">
         <img class="w-full rounded-xl" src="https://plus.unsplash.com/premium_photo-1661284815608-c80001c64d21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Colors" />
-        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">$50</p>
+        <p class="absolute top-0 bg-amber-400 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">₹1000</p>
       </div>
-      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">The Fitness Pack</h1>
+      <h1 class="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">Personal Training</h1>
       <div class="my-4">
         <div class="flex space-x-1 items-center">
           <span>
@@ -278,7 +284,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </span>
-          <p>1:30:00 Minutes</p>
+          <p>1.5 Hours</p>
         </div>
         <div class="flex space-x-1 items-center">
           <span>
@@ -296,7 +302,9 @@
           </span>
           <p>Vanilla JS</p>
         </div>
-        <button class="mt-4 text-xl w-full text-white bg-cyan-700 py-2 hover:bg-amber-500 rounded-xl shadow-lg">Purchase</button>
+        <a href="/members/">
+        <button class="mt-4 text-xl w-full text-white bg-cyan-700 py-2 hover:bg-amber-500 rounded-xl shadow-lg">Purchase</button>\
+        </a>
       </div>
     </div>
   </div>
@@ -312,7 +320,7 @@
         <div class="w-full max-w-6xl mx-auto">
             <div class="text-center max-w-xl mx-auto">
                 <h1 class="text-6xl md:text-7xl font-bold mb-5 text-gray-600">What people <br>are saying.</h1>
-                <h3 class="text-xl mb-5 font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <h3 class="text-xl mb-5 font-light">Unfiltered Reviews from our Members.</h3>
                 <div class="text-center mb-10">
                     <span class="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
                     <span class="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
@@ -329,11 +337,12 @@
                                 <img src="https://i.pravatar.cc/100?img=1" alt="">
                             </div>
                             <div class="flex-grow pl-3">
-                                <h6 class="font-bold text-sm uppercase text-gray-600">Kenzie Edgar.</h6>
+                                <h6 class="font-bold text-sm uppercase text-gray-600">Ruchika Sood.</h6>
                             </div>
                         </div>
                         <div class="w-full">
-                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sunt ratione dolor exercitationem minima quas itaque saepe quasi architecto vel! Accusantium, vero sint recusandae cum tempora nemo commodi soluta deleniti.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"
+                              </span>"Thanks to the Spark Fitness team for the goodwill gesture and for creating a fun workout environment. Loving all the new equipment. Happy to have you open and enjoying the experience. Thanks Team FF Epicuria!"<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
                         </div>
                     </div>
                     <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
@@ -342,11 +351,11 @@
                                 <img src="https://i.pravatar.cc/100?img=2" alt="">
                             </div>
                             <div class="flex-grow pl-3">
-                                <h6 class="font-bold text-sm uppercase text-gray-600">Stevie Tifft.</h6>
+                                <h6 class="font-bold text-sm uppercase text-gray-600">Vinod Bansal.</h6>
                             </div>
                         </div>
                         <div class="w-full">
-                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolore quod necessitatibus, labore sapiente, est, dignissimos ullam error ipsam sint quam tempora vel.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>I love, love, love fitness. It's a block away from my office, so there's no excuse for not getting in a good workout! I've taken the TRX, core and Pilates classes, and they are challenging in the past from some other Gym In Mumbai. Please do let me know about the timings and proper trainer for the same.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
                         </div>
                     </div>
                 </div>
@@ -357,11 +366,11 @@
                                 <img src="https://i.pravatar.cc/100?img=3" alt="">
                             </div>
                             <div class="flex-grow pl-3">
-                                <h6 class="font-bold text-sm uppercase text-gray-600">Tommie Ewart.</h6>
+                                <h6 class="font-bold text-sm uppercase text-gray-600">Tarun Lohia.</h6>
                             </div>
                         </div>
                         <div class="w-full">
-                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, obcaecati ullam excepturi dicta error deleniti sequi.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Terrific ABT class by Robin Gogoi. A lot of old and new members hit the class with vengeance... Fish back to water. Amazing sight. What struck the right cord was Robin's remark that the Human Body is a magnificent Bio Machinery. It can perform miracles many cannot even imagine.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
                         </div>
                     </div>
                     <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
@@ -370,11 +379,11 @@
                                 <img src="https://i.pravatar.cc/100?img=4" alt="">
                             </div>
                             <div class="flex-grow pl-3">
-                                <h6 class="font-bold text-sm uppercase text-gray-600">Charlie Howse.</h6>
+                                <h6 class="font-bold text-sm uppercase text-gray-600">Karan Singh.</h6>
                             </div>
                         </div>
                         <div class="w-full">
-                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque reprehenderit natus, hic sequi itaque dicta nisi voluptatem! Culpa, iusto.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>This gym has just what i need. I tend to work out in the morning. When it's not crowded. So i never had to wait for equipment. Additionally, i found the right trainer. Who helped me to reach my fitness goal for the month.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
                         </div>
                     </div>
                 </div>
@@ -385,11 +394,11 @@
                                 <img src="https://i.pravatar.cc/100?img=5" alt="">
                             </div>
                             <div class="flex-grow pl-3">
-                                <h6 class="font-bold text-sm uppercase text-gray-600">Nevada Herbertson.</h6>
+                                <h6 class="font-bold text-sm uppercase text-gray-600">Deepika Kumari.</h6>
                             </div>
                         </div>
                         <div class="w-full">
-                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatem porro obcaecati dicta, quibusdam sunt ipsum, laboriosam nostrum facere exercitationem pariatur deserunt tempora molestiae assumenda nesciunt alias eius? Illo, autem!<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>I love, love, love fitness. It's a block away from my office, so there's no excuse for not getting in a good workout! I've taken the TRX, core and Pilates classes, and they are challenging in the past from some other Gym In Mumbai. Please do let me know about the timings and proper trainer for the same.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
                         </div>
                     </div>
                     <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
@@ -398,11 +407,11 @@
                                 <img src="https://i.pravatar.cc/100?img=6" alt="">
                             </div>
                             <div class="flex-grow pl-3">
-                                <h6 class="font-bold text-sm uppercase text-gray-600">Kris Stanton.</h6>
+                                <h6 class="font-bold text-sm uppercase text-gray-600">Rohit Gera.</h6>
                             </div>
                         </div>
                         <div class="w-full">
-                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iusto, explicabo, cupiditate quas totam!<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                            <p class="text-sm leading-tight"><span class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Terrific ABT class by Robin Gogoi. A lot of old and new members hit the class with vengeance... Fish back to water. Amazing sight. What struck the right cord was Robin's remark that the Human Body is a magnificent Bio Machinery. It can perform miracles many cannot even imagine.<span class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
                         </div>
                     </div>
                 </div>
@@ -410,18 +419,6 @@
         </div>
     </div>
 </div>
-
-<!-- BUY ME A BEER AND HELP SUPPORT OPEN-SOURCE RESOURCES -->
-<div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
-    <div>
-        <a title="Buy me a beer" href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
-            <img class="object-cover object-center w-full h-full rounded-full" src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"/>
-        </a>
-    </div>
-</div>
-
-
-
   <!-- {% if wallpaper.photo %}
   <img src="{{ wallpaper.photo }}" class="img-fluid">
   {% else %}
