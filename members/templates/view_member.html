@@ -99,6 +99,8 @@
 }
 
 .tab-content>.tab-pane {
+  width: 80%;
+  margin: auto;
     display: none
 }
 
@@ -427,8 +429,7 @@
     {% endif %}
     <form method="POST" action="{% url 'search_member' %}">
         {% csrf_token %}
-        <div class="row">
-            <div class="form-group col"></div>
+        <!-- <div class="row">
             <div class="form-group col">
                 <label for="search">{{ search_form.search.label }}</label>
                 {{ search_form.search | add_css:"form-control" }}
@@ -441,13 +442,16 @@
                 <button type="submit" id="clear" name="clear" class="btn btn-dark" style="margin-top: 30px;">Clear</button>
               </div>
             {% endif %}
-        </div>
+        </div> -->
     </form>
-    <!-- <div id="ajax_result" style="margin-top: 2%;"></div> -->
 </div>
 
+<div class="bg-cyan-600 py-2 mb-7">
+<h1 class="text-center ml-3 truncate font-medium text-white" style="margin-top: 1%; margin-bottom: 1%">MEMBERS</h1>
+</div>
 
 {% if result %}
+
 <div class="max-w-2xl mx-auto">
 
 	<div class="flex flex-col">
@@ -464,7 +468,7 @@
             <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">Registration Upto</th>
             <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">Subscription Type</th>
             <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">Subscription Period</th>
-            <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">Fees</th>
+            <!-- <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">Fees</th> -->
             <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">Delete User</th>
           </tr>
         </thead>
@@ -478,14 +482,14 @@
               <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ member.registration_upto }}</td>
               <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ member.get_subscription_type_display }}</td>
               <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ member.subscription_period }} Months</td>
-              <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              <!-- <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                   {% if member.fee_status == 'paid' %}
                   <span class="icon-checkmark" style="color: green"></span>
                   {% else %}
                   <span class="icon-cross" style="color: red"></span>
                   {% endif %}
-              </td>
-              <td><a href="/members/delete/{{ member.member_id }}/"><button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this? This will permanently delete the record!')">Delete</button></a></td>
+              </td> -->
+              <!-- <td><a href="/members/delete/{{ member.member_id }}/"><button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this? This will permanently delete the record!')">Delete</button></a></td> -->
             </tr>
           {% endfor %}
           </tbody>
@@ -524,7 +528,7 @@
                 <th scope="col">Registration Upto</th>
                 <th scope="col">Subscription Type</th>
                 <th scope="col">Subscription Period</th>
-                <th scope="col">Fees</th>
+                <!-- <th scope="col">Fees</th> -->
               </tr>
             </thead>
             <tbody class="text-center">
@@ -586,7 +590,7 @@
                 <th scope="col">Registration Upto</th>
                 <th scope="col">Subscription Type</th>
                 <th scope="col">Subscription Period</th>
-                <th scope="col">Fees</th>
+                <!-- <th scope="col">Fees</th> -->
               </tr>
             </thead>
             <tbody class="text-center">
@@ -625,7 +629,7 @@
                 <th scope="col">Registration Upto</th>
                 <th scope="col">Subscription Type</th>
                 <th scope="col">Subscription Period</th>
-                <th scope="col">Fees</th>
+                <!-- <th scope="col">Fees</th> -->
               </tr>
             </thead>
             <tbody class="text-center">
@@ -664,7 +668,7 @@
                 <th scope="col">Registration Upto</th>
                 <th scope="col">Subscription Type</th>
                 <th scope="col">Subscription Period</th>
-                <th scope="col">Fees</th>
+                <!-- <th scope="col">Fees</th> -->
               </tr>
             </thead>
             <tbody class="text-center">
@@ -695,41 +699,7 @@
 {% endblock %}
 
 {% block javascript %}
-  <!-- <script>
-    $("#submit").click(function (event) {
-      event.preventDefault();
-      var search = $("#id_search").val();
-
-      $.ajax({
-        type: 'POST',
-        url: '{% url "search_member" %}',
-        data: {
-          'search': search,
-          'csrfmiddlewaretoken': '{{ csrf_token }}'
-        },
-        dataType: 'json',
-        success: function (data) {
-          var search = JSON.parse(data.search);
-          var appended_html = '<table class="table table-bordered"><thead class="text-center"><tr><th>ID</th><th>Name</th><th>Edit</th><th>Delete</th></tr></thead><tbody class="text-center">';
-          for (var i=0; i<search.length; i++) {
-              // now each search[i] has an object within it
-              var obj = search[i];  // obj is an alias for each object in the array
-              //Now you can access each key-value pair like this
-              var fields = obj.fields;
-              var member_id = obj.pk;
-              var first_name = fields.first_name;
-              var last_name = fields.last_name;
-              appended_html += '<tr><td>' + (i + 1) + '</td><td>' + first_name + ' ' + last_name + '</td><td><a href="/members/update/' + member_id + '/"><button class="btn btn-success">Edit</button><td><a href="/members/delete/' + member_id + '/"><button class="btn btn-danger">Delete</button></a></td></tr>';
-          }
-          // alert(appended_html);
-          // alert('Yes');
-          appended_html += '</tbody></table>';
-          $('#ajax_result').html(appended_html);
-        }
-      });
-      // return false;
-    });
-  </script> -->
+ 
   <script type="text/javascript">
     $(document).ready(function(){
         $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
