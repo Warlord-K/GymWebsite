@@ -55,3 +55,7 @@ def change_password(request):
         'form': form,
         'subs_end_today_count': get_notification_count()
     })
+def profile(request):
+    return render(request, 'profile.html', {
+        'subs_end_today_count': get_notification_count()
+    })
