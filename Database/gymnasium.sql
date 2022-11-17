@@ -147,7 +147,7 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$150000$F3gD8KGNs5ac$pSSmXq3Ff1WqcuCdlif5SRmhcDIyUQbNkONXVKWj6+Q=', '2020-02-24 18:55:05.138714', 1, 'Admin', '', '', '', 1, 1, '2020-02-24 15:58:18.493505');
+(1, 'pbkdf2_sha256$150000$F3gD8KGNs5ac$pSSmXq3Ff1WqcuCdlif5SRmhcDIyUQbNkONXVKWj6+Q=', '2022-02-24 18:55:05.138714', 1, 'Admin', '', '', '', 1, 1, '2022-02-24 15:58:18.493505');
 
 -- --------------------------------------------------------
 
@@ -236,27 +236,27 @@ CREATE TABLE `django_migrations` (
 --
 
 INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
-(1, 'accounts', '0001_initial', '2020-02-24 15:55:38.584088'),
-(2, 'contenttypes', '0001_initial', '2020-02-24 15:55:39.715067'),
-(3, 'auth', '0001_initial', '2020-02-24 15:55:42.896911'),
-(4, 'admin', '0001_initial', '2020-02-24 15:55:56.101400'),
-(5, 'admin', '0002_logentry_remove_auto_add', '2020-02-24 15:56:00.081713'),
-(6, 'admin', '0003_logentry_add_action_flag_choices', '2020-02-24 15:56:00.205076'),
-(7, 'contenttypes', '0002_remove_content_type_name', '2020-02-24 15:56:01.707174'),
-(8, 'auth', '0002_alter_permission_name_max_length', '2020-02-24 15:56:03.322121'),
-(9, 'auth', '0003_alter_user_email_max_length', '2020-02-24 15:56:03.463451'),
-(10, 'auth', '0004_alter_user_username_opts', '2020-02-24 15:56:03.698598'),
-(11, 'auth', '0005_alter_user_last_login_null', '2020-02-24 15:56:10.827719'),
-(12, 'auth', '0006_require_contenttypes_0002', '2020-02-24 15:56:10.911356'),
-(13, 'auth', '0007_alter_validators_add_error_messages', '2020-02-24 15:56:11.017959'),
-(14, 'auth', '0008_alter_user_username_max_length', '2020-02-24 15:56:11.181699'),
-(15, 'auth', '0009_alter_user_last_name_max_length', '2020-02-24 15:56:11.360647'),
-(16, 'auth', '0010_alter_group_name_max_length', '2020-02-24 15:56:11.542227'),
-(17, 'auth', '0011_update_proxy_permissions', '2020-02-24 15:56:11.698308'),
-(18, 'members', '0001_initial', '2020-02-24 15:56:12.156386'),
-(19, 'payments', '0001_initial', '2020-02-24 15:56:12.563548'),
-(20, 'reports', '0001_initial', '2020-02-24 15:56:15.063474'),
-(21, 'sessions', '0001_initial', '2020-02-24 15:56:16.103542');
+(1, 'accounts', '0001_initial', '2022-02-24 15:55:38.584088'),
+(2, 'contenttypes', '0001_initial', '2022-02-24 15:55:39.715067'),
+(3, 'auth', '0001_initial', '2022-02-24 15:55:42.896911'),
+(4, 'admin', '0001_initial', '2022-02-24 15:55:56.101400'),
+(5, 'admin', '0002_logentry_remove_auto_add', '2022-02-24 15:56:00.081713'),
+(6, 'admin', '0003_logentry_add_action_flag_choices', '2022-02-24 15:56:00.205076'),
+(7, 'contenttypes', '0002_remove_content_type_name', '2022-02-24 15:56:01.707174'),
+(8, 'auth', '0002_alter_permission_name_max_length', '2022-02-24 15:56:03.322121'),
+(9, 'auth', '0003_alter_user_email_max_length', '2022-02-24 15:56:03.463451'),
+(10, 'auth', '0004_alter_user_username_opts', '2022-02-24 15:56:03.698598'),
+(11, 'auth', '0005_alter_user_last_login_null', '2022-02-24 15:56:10.827719'),
+(12, 'auth', '0006_require_contenttypes_0002', '2022-02-24 15:56:10.911356'),
+(13, 'auth', '0007_alter_validators_add_error_messages', '2022-02-24 15:56:11.017959'),
+(14, 'auth', '0008_alter_user_username_max_length', '2022-02-24 15:56:11.181699'),
+(15, 'auth', '0009_alter_user_last_name_max_length', '2022-02-24 15:56:11.360647'),
+(16, 'auth', '0010_alter_group_name_max_length', '2022-02-24 15:56:11.542227'),
+(17, 'auth', '0011_update_proxy_permissions', '2022-02-24 15:56:11.698308'),
+(18, 'members', '0001_initial', '2022-02-24 15:56:12.156386'),
+(19, 'payments', '0001_initial', '2022-02-24 15:56:12.563548'),
+(20, 'reports', '0001_initial', '2022-02-24 15:56:15.063474'),
+(21, 'sessions', '0001_initial', '2022-02-24 15:56:16.103542');
 
 -- --------------------------------------------------------
 
@@ -310,13 +310,13 @@ CREATE TABLE `members_member` (
 --
 
 INSERT INTO `members_member` (`member_id`, `first_name`, `last_name`, `mobile_number`, `email`, `address`, `medical_history`, `admitted_on`, `registration_date`, `registration_upto`, `dob`, `subscription_type`, `subscription_period`, `amount`, `fee_status`, `batch`, `photo`, `notification`, `stop`) VALUES
-(1, 'Keval', 'Senghani', '8656423958', 'keval@gmail.com', 'B-105, Ganesh Apartment, Gandhi Road', 'None', '2020-02-24', '2020-04-24', '2020-05-24', '1999-05-11', 'gym', '1', '500', 'pending', 'morning', '', 0, 1),
-(2, 'Mitesh', 'Masurkar', '9023568745', 'mitesh@gmail.com', 'A-3, Sai Apartment, Ganesh Nagar', 'None', '2020-02-24', '2020-02-24', '2020-03-24', '1999-06-05', 'gym_and_cross_fit', '1', '750', 'paid', 'evening', '', 2, 0),
-(3, 'Keval', 'Patel', '9056487562', 'keval@gmail.com', 'A-104, Ganesh Apartment, Gandhi Road', 'None', '2020-02-24', '2020-02-24', '2020-03-24', '1999-11-08', 'gym', '1', '500', 'paid', 'morning', '', 2, 0),
-(4, 'Suyash', 'Gupte', '8945623578', 'suyash@gmail.com', '105, Sai Sadan, Sector 5', 'None', '2020-02-24', '2020-04-25', '2020-05-25', '1998-12-11', 'pt', '1', '1500', 'paid', 'morning', '', 2, 0),
-(5, 'Rajan', 'Yadav', '9056458725', 'rajan@gmail.com', 'C-2, Apollo Apartment, Sector 20', 'None', '2020-02-24', '2020-04-25', '2020-05-25', '1999-07-05', 'cross_fit', '1', '500', 'paid', 'morning', '', 2, 0),
-(8, 'Rajat', 'Singh', '9856235487', 'rajat@gmail.com', 'B-103, Ganesh Apartment, Sector 10', 'None', '2020-02-25', '2020-01-29', '2020-03-29', '1998-09-02', 'pt', '2', '2000', 'paid', 'morning', '', 2, 0),
-(9, 'Mahesh', 'Sawant', '6545892536', 'mahesh@gmail.com', 'B-102, Sai Sadan, Gandhi Road', 'None', '2020-02-25', '2020-02-25', '2020-03-25', '1999-10-29', 'gym_and_cross_fit', '1', '1000', 'paid', 'morning', '/profile_cKCVlHE.jpg', 2, 0);
+(1, 'Keval', 'Senghani', '8656423958', 'keval@gmail.com', 'B-105, Ganesh Apartment, Gandhi Road', 'None', '2022-02-24', '2022-04-24', '2022-05-24', '2022-05-11', 'gym', '1', '500', 'pending', 'morning', '', 0, 1),
+(2, 'Mitesh', 'Masurkar', '9023568745', 'mitesh@gmail.com', 'A-3, Sai Apartment, Ganesh Nagar', 'None', '2022-02-24', '2022-02-24', '2022-03-24', '1999-06-05', 'gym_and_cross_fit', '1', '750', 'paid', 'evening', '', 2, 0),
+(3, 'Keval', 'Patel', '9056487562', 'keval@gmail.com', 'A-104, Ganesh Apartment, Gandhi Road', 'None', '2022-02-24', '2022-02-24', '2022-03-24', '1999-11-08', 'gym', '1', '500', 'paid', 'morning', '', 2, 0),
+(4, 'Suyash', 'Gupte', '8945623578', 'suyash@gmail.com', '105, Sai Sadan, Sector 5', 'None', '2022-02-24', '2022-04-25', '2022-05-25', '1998-12-11', 'pt', '1', '1500', 'paid', 'morning', '', 2, 0),
+(5, 'Rajan', 'Yadav', '9056458725', 'rajan@gmail.com', 'C-2, Apollo Apartment, Sector 20', 'None', '2022-02-24', '2022-04-25', '2022-05-25', '1999-07-05', 'cross_fit', '1', '500', 'paid', 'morning', '', 2, 0),
+(8, 'Rajat', 'Singh', '9856235487', 'rajat@gmail.com', 'B-103, Ganesh Apartment, Sector 10', 'None', '2022-02-25', '2022-01-29', '2022-03-29', '1998-09-02', 'pt', '2', '2000', 'paid', 'morning', '', 2, 0),
+(9, 'Mahesh', 'Sawant', '6545892536', 'mahesh@gmail.com', 'B-102, Sai Sadan, Gandhi Road', 'None', '2022-02-25', '2022-02-25', '2022-03-25', '1999-10-29', 'gym_and_cross_fit', '1', '1000', 'paid', 'morning', '/profile_cKCVlHE.jpg', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -337,19 +337,19 @@ CREATE TABLE `payments_payments` (
 --
 
 INSERT INTO `payments_payments` (`id`, `payment_date`, `payment_period`, `payment_amount`, `user_id`) VALUES
-(1, '2020-02-24', 1, 500, 1),
-(2, '2020-03-25', 1, 500, 1),
-(3, '2020-03-24', 1, 500, 1),
-(4, '2020-02-24', 1, 750, 2),
-(5, '2020-02-24', 1, 500, 3),
-(6, '2020-02-24', 1, 1500, 4),
-(7, '2020-02-24', 1, 500, 5),
-(8, '2020-02-25', 1, 500, 5),
-(9, '2020-02-25', 1, 1500, 4),
-(10, '2020-04-25', 1, 1500, 4),
-(14, '2020-01-29', 2, 2000, 8),
-(15, '2020-02-25', 1, 1000, 9),
-(16, '2020-04-25', 1, 500, 5);
+(1, '2022-02-24', 1, 500, 1),
+(2, '2022-03-25', 1, 500, 1),
+(3, '2022-03-24', 1, 500, 1),
+(4, '2022-02-24', 1, 750, 2),
+(5, '2022-02-24', 1, 500, 3),
+(6, '2022-02-24', 1, 1500, 4),
+(7, '2022-02-24', 1, 500, 5),
+(8, '2022-02-25', 1, 500, 5),
+(9, '2022-02-25', 1, 1500, 4),
+(10, '2022-04-25', 1, 1500, 4),
+(14, '2022-01-29', 2, 2000, 8),
+(15, '2022-02-25', 1, 1000, 9),
+(16, '2022-04-25', 1, 500, 5);
 
 -- --------------------------------------------------------
 
